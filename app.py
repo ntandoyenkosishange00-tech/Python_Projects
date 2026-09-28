@@ -18,13 +18,18 @@ def contact():
         name = request.form['name']
         email = request.form['email']
         message = request.form['message']
+        phone = request.form['phone']
         # You can add code to process the form data, such as sending an email or saving it to a database
         return render_template('contact.html', success=True)
     return render_template('contact.html')
 
 @app.route('/services')
 def services():
-    return render_template('services.html')     
+    return render_template('services.html')  
+    
+@app.route('/recent projects')
+def recent projects ():
+    return render_template('recent projects'):
 
 if __name__ == '__main__':
     app.run(debug=False)
